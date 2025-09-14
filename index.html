@@ -186,21 +186,39 @@
 
     /* --- Responsive --- */
     @media (max-width: 768px) {
-      header {
-        flex-direction: column;
-        align-items: flex-start;
-      }
+    header {
+        padding: 8px 12px;          /* reduce padding */
+        flex-direction: column;     /* stack title + nav */
+        align-items: center;        /* center them neatly */
+        text-align: center;
+    }
 
-      header nav {
-        margin-top: 10px;
+    header h2 {
+        font-size: 1rem;            /* smaller site title */
+        margin: 5px 0;              /* tighten spacing */
+    }
+
+    header nav {
+        margin-top: 5px;            /* slight space below title */
         flex-wrap: wrap;
-      }
+        justify-content: center;
+    }
 
-      #hero img {
+    header nav a {
+        font-size: 0.85rem;         /* shrink nav links */
+        margin: 3px 6px;
+    }
+
+    #hero img {
         width: 120px;
         height: 120px;
-      }
     }
+
+    #hero {
+        padding-top: 130px; /* less padding now that header is smaller */
+    }
+}
+
 
     @media (max-width: 480px) {
       header h2 {
@@ -217,6 +235,7 @@
         height: 100px;
       }
     }
+
   </style>
 </head>
 <body>
